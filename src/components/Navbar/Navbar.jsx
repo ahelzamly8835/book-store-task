@@ -2,6 +2,7 @@ import NavbarLogo from './NavbarLogo';
 import LinkItem from '../ui/LinkItem';
 import Button from '../ui/Button';
 import BackgroundImage from '../../assets/images/533643aa8db82414f48d43a992d009dda3961386.png';
+import { Link } from 'react-router-dom';
 
 export default function Navbar() {
     return (
@@ -25,8 +26,8 @@ export default function Navbar() {
                     <LinkItem to={"about"}>about us</LinkItem>
                 </div>
                 <div className="nav-btns flex items-center ml-[40em] gap-3">
-                    <Button width={"fit"} isMainBtn={true}>login</Button>
-                    <Button width={"fit"} isMainBtn={false}>sign up</Button>
+                <Link to={"/login"}><Button width={"fit"} isMainBtn={true}>login</Button></Link>
+                    <Link to={"/signup"}><Button width={"fit"} isMainBtn={false}>sign up</Button></Link>
                 </div>
             </div>
         </div>
